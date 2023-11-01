@@ -1,0 +1,55 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the body and background */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header and navigation */
+header {
+    background-color: #44a278;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style the main content area */
+main {
+    display: grid;
+    grid-template-areas: "header" "main-content" "footer";
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.main-content {
+    grid-area: main-content;
+    background-image: url(https://cdn.pixabay.com/photo/2016/10/13/22/30/tesla-1738969_960_720.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: #fff; /* Text color for better readability */
+}
+
+/* Style individual grid items (sections) */
+section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
