@@ -1,55 +1,196 @@
-/* Reset some default browser styles */
-* {
-    margin: 0;
+*{
     padding: 0;
-    box-sizing: border-box;
+    margin: 0;
+    
 }
 
-/* Style the body and background */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
+    background-color: black;
 }
 
-/* Style the header and navigation */
-header {
-    background-color: #44a278;
-    color: #fff;
+/* Legg til en stil for hovedbildet */
+.main-image {
     text-align: center;
-    padding: 20px;
+    position: relative;
 }
 
-/* Style the main content area */
-main {
-    display: grid;
-    grid-template-areas: "header" "main-content" "footer";
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
-}
-
-.main-content {
-    grid-area: main-content;
-    background-image: url(https://cdn.pixabay.com/photo/2016/10/13/22/30/tesla-1738969_960_720.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 20px;
-    color: #fff; /* Text color for better readability */
-}
-
-/* Style individual grid items (sections) */
-section {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Style the footer */
-footer {
-    text-align: center;
-    background-color: #333;
-    color: #fff;
+/* Stil for overskriften på bildet */
+.main-image h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Stil for <section> med class "content-section" */
+.content-section {
+    background-color: #000; /* Svart bakgrunn */
+    padding: 20px; 
+    height: 1500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Legg til passende avstand */
+}
+
+
+
+.p-class{
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+}
+h1 {
+    margin: 0;
+}
+
+p{
+    
+    background-color: rgba(255, 255, 255, 0.7);
+}
+main {
+    
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+p {
+    line-height: 1.6;
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+img.full-width {
+    display: block;
+    margin: 0 auto; /* Fjerner mellomrommet mellom header og bildene */
+    max-width: 100%; /* Bilder dekker nå hele bredden uten mellomrom */
+    height: auto;
+}
+
+/* Stil for første bilde */
+img.first-image {
+    display: block;
+    margin: 0;
+    max-width: 100%;
+    width: 100%; /* Legg til denne linjen for å sikre at bildet dekker hele bredden */
+    height: auto;
+    /* Tilpass stilene for første bilde her */
+}
+
+/* Stil for andre bilde */
+img.second-image {
+    /* Tilpass stilene for andre bilde her */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+caption {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Stil for søylediagramgraf i infografikk-stil */
+.graf {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+.graf div {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.graf div::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px; /* Tykkelsen på stolpen */
+    background-color: #007BFF;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+/* Hover-effekt for søylediagram */
+.graf div:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+}
+
+.graf div:hover::after {
+    background-color: #0056b3;
+    height: 10px; /* Endre tykkelsen på stolpen ved hover */
+}
+
+/* Legg til en klasse for hele seksjonen */
+.section {
+    text-align: center;
+    /* Bakgrunnsfarge */
+    padding: 20px; /* Legg til passende avstand */
+}
+
+/* Tilpass grafen */
+#bar-chart {
+    display: inline-block;
+    max-width: 80%;
+    background-color: white; /* Bakgrunnsfarge for grafområdet */
+}
+
+/* Tilpass p-elementet */
+#bar-chart p {
+    text-align: center;
+}
+
+/* Tilpass grafområdet og p-elementet innenfor .section */
+.section #bar-chart,
+.section #bar-chart p {
+    margin: 0 auto; /* Sentrering horisontalt */
+}
+
+
+/* Mobilresponsivitet */
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+    .graf {
+        flex-direction: column;
+    }
+    .graf div {
+        margin: 5px 0;
+    }
+    p {
+        padding: 0 10px;
+    }
 }
