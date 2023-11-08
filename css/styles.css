@@ -33,7 +33,7 @@ body {
 .content-section {
     background-color: #000; /* Svart bakgrunn */
     padding: 20px; 
-    height: 1500px;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -178,7 +178,17 @@ th, td {
     margin: 0 auto; /* Sentrering horisontalt */
 }
 
+#area-chart {
+    width: 100%;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
 
+  #area-chart h1 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
 /* Mobilresponsivitet */
 @media (max-width: 768px) {
     main {
