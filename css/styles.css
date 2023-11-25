@@ -8,30 +8,24 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color: white;
 }
 
 /* Legg til en stil for hovedbildet */
-.main-image {
-    text-align: center;
-    position: relative;
-}
+
+
+
+
+
+
+  
 
 /* Stil for overskriften på bildet */
-.main-image h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 10px;
-    font-size: 24px;
-    font-weight: bold;
-}
+
 
 /* Stil for <section> med class "content-section" */
 .content-section {
-    background-color: #000; /* Svart bakgrunn */
+    
     padding: 20px; 
     
     display: flex;
@@ -57,34 +51,42 @@ p{
 }
 main {
     
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     max-width: 100%;
     margin: 0;
     overflow: hidden;
+    display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 30px;
 }
 
 p {
     line-height: 1.6;
     margin: 20px 0;
     padding: 0 20px;
+    width: 50%;
 }
 
 img.full-width {
     display: block;
-    margin: 0 auto; /* Fjerner mellomrommet mellom header og bildene */
-    max-width: 100%; /* Bilder dekker nå hele bredden uten mellomrom */
+    margin: 0 auto; 
+   width: 50%;
     height: auto;
+    position: relative;
+
+
 }
 
-/* Stil for første bilde */
+
 img.first-image {
     display: block;
     margin: 0;
     max-width: 100%;
-    width: 100%; /* Legg til denne linjen for å sikre at bildet dekker hele bredden */
+    width: 100%;
     height: auto;
-    /* Tilpass stilene for første bilde her */
+    margin-bottom: 5px;
+
 }
 
 /* Stil for andre bilde */
@@ -156,8 +158,9 @@ th, td {
 /* Legg til en klasse for hele seksjonen */
 .section {
     text-align: center;
-    /* Bakgrunnsfarge */
-    padding: 20px; /* Legg til passende avstand */
+    
+    padding: 100px; 
+    width: 50%;
 }
 
 /* Tilpass grafen */
@@ -179,10 +182,11 @@ th, td {
 }
 
 #area-chart {
-    width: 100%;
+    width: 80%;
     margin: 20px auto;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    
+    margin-bottom: 10px;
   }
 
   #area-chart h1 {
@@ -202,5 +206,13 @@ th, td {
     }
     p {
         padding: 0 10px;
+    }
+
+    .section{
+        padding: 10px;
+     width: 100%;
+    }
+    p{
+        width: 100%;
     }
 }

@@ -8,15 +8,20 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
-    <main>
+    <header>
       <div class="main-image">
-        <h1>Norges adopsjon av elektriske kjøretøy</h1>
         <img
           class="full-width first-image"
-          src="images/tesla-car.jpg"
+          src="images/bildeforbilde.avif"
           alt="Elektrisk bil i Norge 1"
         />
+        <figcaption>
+          Det har vært nedgang i elbildsalget i 2023. Bilde:myenergi/unsplash
+        </figcaption>
       </div>
+    </header>
+    <main>
+      <h1 style="text-align: center">Drastikk nedgang i elbilsalget i år</h1>
       <section class="content-section">
         <p class="p-class" style="text-align: center">
           I 2022 var hele 79% av nye biler solgt i Norge helelektriske, mye av
@@ -32,28 +37,35 @@
       <!-- Tabell med data -->
       <div class="section">
         <div id="bar-chart" style="text-align: center">
-          <h2>Endring i 2022</h2>
+          <h2>Endring fra 2019 - 2022</h2>
 
-          <canvas id="barChart" style="max-width: 80%"></canvas>
+          <canvas id="elbilChart" width="400" height="400"></canvas>
 
           <p style="text-align: center">
-            Dette stolpediagrammet viser endringen i ulike kjøretøykategorier i
-            Norge i 2022.Datasettene gir innsikt i hvordan antallet kjøretøyer i
-            ulike kategorier har utviklet seg i løpet av disse årene.
+            Dette stolpediagrammet viser antall elbiler som ble registret i
+            Norge for hver år fra 2019 til 2022. Kilde: SSB
           </p>
         </div>
       </div>
+      <h2 style="margin-bottom: 6px">Drastisk nedgang</h2>
+      <figure>
+        <img
+          class="full-width second-image"
+          src="images/el-mustang.avif"
+          alt="Elektrisk bil i Norge 2"
+        />
+        <figcaption style="text-align: center">
+          Det har vært flere faktorer til at salget har gått ned i 2023.
+          Bilde:Adrian N/unsplash
+        </figcaption>
+      </figure>
+
       <p style="text-align: center">
         Det er derimot ikke tall som sier at dette kommer til å vedvare, det er
         flere faktorer som har gjort at salget av elbiler har stagnert noe i
         2023 – det har kommet nye avgifter på kjøretøy med en prislapp over 500
         000. Det har også blitt gjort vesentlige prisjusteringer i markedet som
         har medført at mange sitter igjen med større verditap på bilene sine.
-        Etterspørselen etter hurtigladere har økt markant og flere kommuner har
-        hatt utfordringer med å imøtekomme behovet, men nå virker det som om
-        dette har løsnet noe da flere og flere hurtigladere kommer på plass i
-        det norske markedet. Tall fra NTB viser at i mai 2022 var det 4600
-        hurtigladere langs norske veier – mens i år er tallet 63002.
       </p>
       <div id="area-chart">
         <h1 style="text-align: center">Endring i Antall Elbiler</h1>
@@ -68,17 +80,17 @@
           <tr>
             <td>Nye Elbiler</td>
             <td>7,516</td>
-            <td>-22.7%</td>
+            <td><span style="color: red">-22.7%</span></td>
             <td>87,191</td>
             <td>-2.7%</td>
           </tr>
         </table>
+        <figcaption style="text-align: center; margin-top: 5px">
+          Elbilsalget har gått ned med 22.7 prosent kontra til oktober ifjor:
+          Kilde SSB
+        </figcaption>
       </div>
-      <img
-        class="full-width second-image"
-        src="images/tesla-cars.jpg"
-        alt="Elektrisk bil i Norge 2"
-      />
+
       <div id="graf2"></div>
       <p>
         Norge er derimot ifølge NTB i en unik posisjon hvor vi kan bli den
